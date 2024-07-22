@@ -1,0 +1,5 @@
+*.sw*
+.cache
+build
+drogon
+plan
