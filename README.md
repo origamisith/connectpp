@@ -1,0 +1,2 @@
+# My tenative dive into HTMX and Drogon with Websockets
+In this repo, I am attempting to copy the results from [Websockets' documentation](https://websockets.readthedocs.io/en/stable/intro/tutorial1.html) to teach myself the stated technologies and how they work together. I have already followed the tutorial, writing python and javascript to create a multiplayer connect 4 game, and I want to compare results with this new stack. 
