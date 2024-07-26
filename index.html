@@ -9,13 +9,12 @@
 <body >
 <!-- Change back to /cpp/ws -->
 <div hx-ext="ws" ws-connect="/board">
-	<button id="butt">Test</button>
-	<div class="board" hx-trigger="load" hx-get=/loadboard"></div>
+	<div class="board" hx-trigger="load" hx-get="/loadboard"></div>
 </div>
 <div class="actions">
-	<button class="action link join" href="">Join</button>
-	<button class="action link watch" href="">Watch</button>
-	<button class="action replay" href="">Replay</button>
+	<button class="action link join">Join</button>
+	<button class="action link watch">Watch</button>
+	<button class="action replay">Replay</button>
 </div>
 </body>
 </html>

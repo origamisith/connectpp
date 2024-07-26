@@ -17,11 +17,16 @@ std::string BoardView::genText(const DrTemplateData& BoardView_view_data)
 {
 	drogon::OStringStream BoardView_tmp_stream;
 	std::string layoutName{""};
- for(int i=0; i<7; i++) {
-	BoardView_tmp_stream << "<div class=\"column\" id=\"col{%i}\">\n";
+ for(int i=0; i<8; i++) {
+	BoardView_tmp_stream << "<div class=\"column\" id=\"col";
+BoardView_tmp_stream<<i;
+	BoardView_tmp_stream << "\">\n";
 	BoardView_tmp_stream << "	";
- for(int j=0; j<6; j++) {
-	BoardView_tmp_stream << "		<div class=\"box\" id=\"cell{%i}{%j}\"></div>\n";
+ for(int j=0; j<7; j++) {
+	BoardView_tmp_stream << "	<div class=\"box\" id=\"cell";
+BoardView_tmp_stream<<i;
+BoardView_tmp_stream<<j;
+	BoardView_tmp_stream << "\" ws-send hx-trigger=\"click\"></div>\n";
 	BoardView_tmp_stream << "	";
 }
 	BoardView_tmp_stream << "</div>\n";
