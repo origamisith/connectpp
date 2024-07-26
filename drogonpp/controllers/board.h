@@ -4,7 +4,7 @@
 
 using namespace drogon;
 
-class ws_test : public drogon::WebSocketController<ws_test>
+class board : public drogon::WebSocketController<board>
 {
   public:
      void handleNewMessage(const WebSocketConnectionPtr&,
@@ -16,6 +16,6 @@ class ws_test : public drogon::WebSocketController<ws_test>
     WS_PATH_LIST_BEGIN
     // list path definitions here;
     // WS_PATH_ADD("/path", "filter1", "filter2", ...);
-    WS_PATH_ADD("/ws");
+    WS_PATH_ADD("/board",Get,Post);
     WS_PATH_LIST_END
 };

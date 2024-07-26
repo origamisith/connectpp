@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Connect 4++</title>
-		<script src="htmx.min.js" defer></script>
-		<script src="https://unpkg.com/htmx-ext-ws@2.0.0/ws.js" defer></script>
-		<script src="helper.js" defer></script>
-	</head>
-	<body>
-		<button hx-post="/cpp/clicked"
-				hx-trigger="click"
-				hx-swap="outerHTML"
-				>
-				Click Me!
-		</button>
-	</body>
-	<!-- Change back to /cpp/ws -->
-	<div hx-ext="ws" ws-connect="/ws">
-		<div id="notifications"></div>
-		<div id="chat_room">
-			This is the chat room!!!
-			<p id="a_message"></p>
-		</div>
-		<form id="form" ws-send>
-			<input name="chat_message">
-		</form>
+<head>
+	<title>Connect 4++</title>
+	<script src="htmx.min.js" defer></script>
+	<script src="https://unpkg.com/htmx-ext-ws@2.0.0/ws.js" defer></script>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body >
+<!-- Change back to /cpp/ws -->
+<div hx-ext="ws" ws-connect="/board">
+	<button id="butt">Test</button>
+	<div class="board" hx-trigger="load" hx-get=/loadboard"></div>
+</div>
+<div class="actions">
+	<button class="action link join" href="">Join</button>
+	<button class="action link watch" href="">Watch</button>
+	<button class="action replay" href="">Replay</button>
+</div>
+</body>
 </html>
